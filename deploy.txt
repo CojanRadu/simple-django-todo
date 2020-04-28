@@ -53,3 +53,6 @@ git add README.md
 git commit -m "first commit"
 git remote add origin https://github.com/CojanRadu/simple-django-todo.git
 git push -u origin master
+
+ heroku git:remote -a simple-django-todo-radu
+ git push heroku master

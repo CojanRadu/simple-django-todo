@@ -77,3 +77,8 @@ HOSTNAME    ->    simple-django-todo-radu.herokuapp.com
 #change stuff on settings.py for devlepment - true/false
 .bashrc file add:
                 export DEVELOPMENT=1
+
+
+# use this https://miniwebtool.com/django-secret-key-generator/
+#to generate new secret key
+#key can be different local and online

@@ -1,0 +1,55 @@
+sudo pip3 install django
+django-admin startproject django_todo .
+python manage.py runserver 127.0.0.1:5000
+
+python manage.py migrate
+
+
+linux: find .bash_aliases and add 
+alias run='python manage.py runserver 127.0.0.1:5000'
+alias run='python ~/workspace/manage.py runserver 127.0.0.1:5000'
+windows:
+cd~
+touch .bash_profile
+notepad .bash_profile
+alias run='python manage.py runserver 127.0.0.1:5000'
+source .bash_profile
+
+
+# makes a new app inside project
+django-admin startapp todo 
+
+#create admin user
+python manage.py createsuperuser
+
+#those should go together
+python manage.py makemigrations
+python manage.py migrate
+
+
+sudo pip3 install coverage
+python manage.py test
+coverage run --source=todo manage.py test
+coverage html
+
+sudo pip3 install gunicorn
+sudo pip3 install psycopg2~=2.7.3.1
+
+pip3 freeze --local > requirements.txt
+
+heroku create simple-django-todo-radu --region eu
+
+#check remotes
+git remote -v
+
+heroku addons:create heroku-postgresql:hobby-dev -a simple-django-todo-radu 
+sudo pip3 install dj_database_url
+python3 manage.py migrate
+
+
+echo "# simple-django-todo" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git remote add origin https://github.com/CojanRadu/simple-django-todo.git
+git push -u origin master

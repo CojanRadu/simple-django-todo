@@ -74,6 +74,6 @@ HOSTNAME    ->    simple-django-todo-radu.herokuapp.com
 
 #change on heroku automatic deploys
 
-
-
-
+#change stuff on settings.py for devlepment - true/false
+.bashrc file add:
+                export DEVELOPMENT=1

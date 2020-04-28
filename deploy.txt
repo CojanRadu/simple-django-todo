@@ -62,5 +62,16 @@ git push -u origin master
 
  echo web: gunicorn django_todo.wsgi:application > Procfile
 
- git push origin master && git push heroku master
+#change settings.py
+ALLOWED_HOSTS = ['simple-django-todo-radu.herokuapp.com', '127.0.0.1']
+
+git push origin master && git push heroku master
+
+#change on heroku to use github
+
+#add on heroku envir vars:
+HOSTNAME    ->    simple-django-todo-radu.herokuapp.com
+
+
+
 

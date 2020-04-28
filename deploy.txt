@@ -72,6 +72,8 @@ git push origin master && git push heroku master
 #add on heroku envir vars:
 HOSTNAME    ->    simple-django-todo-radu.herokuapp.com
 
+#change on heroku automatic deploys
+
 
 
 

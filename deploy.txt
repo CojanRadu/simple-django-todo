@@ -56,3 +56,9 @@ git push -u origin master
 
  heroku git:remote -a simple-django-todo-radu
  git push heroku master
+
+ heroku config:set DISABLE_COLLECTSTATIC=1
+ git push heroku master
+
+ echo web: gunicorn django_todo.wsgi:application > Procfile
+
